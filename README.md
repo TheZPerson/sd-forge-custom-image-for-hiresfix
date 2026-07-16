@@ -47,7 +47,7 @@ Easiest way to do this is to rename the extension folder to something like: 00-f
 ## Compatibility
 
 Tested to work on fresh installs of __Neo__ and 	__Classic__.
-<br>And (not so fresh intall of) 	__reForge__
+<br>And (not so fresh install of) 	__reForge__
 
 Because how simple the extension is, it might work on other forks as well.
 <br>Although I'm not sure if every fork has the Upscale(✨)-button which is fairly essential for the intented workflow. 
