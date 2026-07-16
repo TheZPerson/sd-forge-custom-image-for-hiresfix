@@ -14,6 +14,13 @@ You can also add or remove objects before upscaling or just use different image 
 
 Of course, depending on your denoising settings, there is always a chance that AI will still screw thing up again.
 
+## Install
+
+There is a chance that other extension might overwrite effects of this extension or vise versa, 
+to mitigate this it is recommend that this extension is run before other extensions that might modify the target image. 
+
+Easiest way to do this is to rename the extension folder to something like: 00-forge-hiresfix-swap. 
+
 ## Usage
 
 1. Generate an image.
