@@ -16,14 +16,14 @@ Of course, depending on your denoising settings, there is always a chance that A
 
 ## Install
 
-Open yout WebUIs Extension-Tab. Go to Install from URL tab > Paste this repo's URL into the first field > Click Install
+Open your WebUIs Extension-Tab. Go to Install from URL tab > Paste this repo's URL into the first field > Click Install
 
 Or go to your WebUI folder and manually clone this repo into your extensions folder:
 
-git clone https://github.com/TheZPerson/sd-forge-custom-image-for-hiresfix
+`git clone https://github.com/TheZPerson/sd-forge-custom-image-for-hiresfix`
 
-There is a chance that other extension might overwrite effects of this extension or vise versa, 
-to mitigate this it is recommend that this extension is run before other extensions that might modify the target image. 
+There is a chance that other extension might overwrite effects of this extension or vice versa.
+To mitigate this it is recommend that this extension is run before other extensions that might modify the target image. 
 
 Easiest way to do this is to rename the extension folder to something like: 00-forge-hiresfix-swap. 
 
@@ -47,9 +47,7 @@ Easiest way to do this is to rename the extension folder to something like: 00-f
 
 ## Compatibility
 
-Still untested for unmodified backends, I don't guarantee that it works for everyone just yet. But it should work with Neo at least.
+Tested on fresh installs of Neo.
 
-Because how simple the extension is, I see no reason why it wouldn't work on other forks as well.
+Because how simple the extension is, it might work on other forks as well.
 Although I'm not sure if every fork has the Upscale(✨)-button which is fairly essential for the intented workflow. 
-
-Issues may rise with other extensions that also modify the first-pass image.
