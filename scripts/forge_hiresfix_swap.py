@@ -15,6 +15,9 @@ else:
 
 class Forge_HiresFix_Swap(scripts.Script):
 
+    def __init__(self):
+        super().__init__()
+
     def title(self):
         return "Hires Fix Img Swapper"
 
@@ -26,25 +29,26 @@ class Forge_HiresFix_Swap(scripts.Script):
             else:
                 inputImage = gr.Image(type="pil",label="img",show_label=False)
 
-            return [enable, inputImage.background if is_neo else inputImage ,inputImage.foreground if is_neo else None]
+            if is_neo:
+                return [enable, inputImage.background ,inputImage.foreground]
+            else:
+                return [enable, inputImage, inputImage]
 
     def show(self, is_img2img: bool):
           return scripts.AlwaysVisible if is_img2img is False else False
 
-    def process(self,p: StableDiffusionProcessing, enable,inputImageBG, inputImageFG):
+    def process(self, p: StableDiffusionProcessing, enable,inputImageBG, inputImageFG):
 
         if p.firstpass_image is None or hasattr(p, "_ad_inner") or inputImageBG is None or _is_pil_image(inputImageBG) is False or enable is False:
             return
 
         outputImage = inputImageBG
-        
-        if is_neo and _is_pil_image(inputImageFG) != False:
+         
+        if is_neo and _is_pil_image(inputImageFG) is True:
             outputImage = Forge_HiresFix_Swap.merge(np.array(inputImageBG),np.array(inputImageFG))
 
 
         p.firstpass_image = outputImage
-
-        return
      
 
     def merge(bg: np.ndarray, fg: np.ndarray):
