@@ -35,7 +35,7 @@ Easiest way to do this is to rename the extension folder to something like: 00-f
 4. Import modified image to the Hires.Fix Img Swapper -extension.
 5. While the original image is still selected in the gallery press the Upscale(✨)-button to start the Hires. Fix.
 6. The original Hires. Fix image now gets automatically changed to the edited one. 
-7. When the Hires. Fix is done, disable the extension or just remove the modified image from the extension.
+7. When the Hires. Fix is done, disable the extension   ~or just remove the modified image from the extension.~
 
 ## Tips
 1. Newer version of Gradio (like in Neo) allows you to paste images directly from the clipboard with CTRL+V.This saves you the hassle of saving image-files to import them. 
