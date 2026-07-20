@@ -15,6 +15,8 @@ else:
 
 class Forge_HiresFix_Swap(scripts.Script):
 
+    sorting_priority =getattr(shared.opts, "hires_fix_sortOrder",-995)
+
     def __init__(self):
         super().__init__()
 
@@ -65,6 +67,7 @@ class Forge_HiresFix_Swap(scripts.Script):
 def on_ui_settings():
     section = ("hires_fix_swap", "Hires Fix Img Swapper")
     shared.opts.add_option("hires_fix_swap_maxheight",shared.OptionInfo(default=300,label="Canvas Max Height", component=gr.Number, component_args = {'precision':0, 'minimum': 0,},section=section).needs_reload_ui())
+    shared.opts.add_option("hires_fix_sortOrder",shared.OptionInfo(default=-995,label="Extension Sort Order", component=gr.Number, component_args = {'precision':0},section=section).needs_reload_ui())
 
     if is_neo:
         shared.opts.add_option("hires_fix_swap_canvasSoftness",shared.OptionInfo(default=25,label="Brush Softness", component=gr.Number, component_args = {'precision':0, 'minimum': 0, 'maximum' : 100 },section=section).needs_reload_ui())
